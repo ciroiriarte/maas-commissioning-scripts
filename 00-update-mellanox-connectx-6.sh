@@ -48,11 +48,11 @@ set -euo pipefail
 # https://network.nvidia.com/products/adapter-software/firmware-tools/
 
 if [[ $(uname -m) == "x86_64" ]]; then
-	export MLX_FT_URL=https://www.mellanox.com/downloads/MFT/mft-4.26.1-3-x86_64-deb.tgz
-	export MLX_UP_URL=https://www.mellanox.com/downloads/firmware/mlxup/4.26.0/SFX/linux_x64/mlxup
+	export MLX_FT_URL=https://www.mellanox.com/downloads/MFT/mft-4.32.0-120-x86_64-deb.tgz
+	export MLX_UP_URL=https://www.mellanox.com/downloads/firmware/mlxup/4.30.0/SFX/linux_x64/mlxup
 elif [[ $(uname -m) == "aarch64" ]]; then
-	export MLX_FT_URL=https://www.mellanox.com/downloads/MFT/mft-4.26.1-3-arm64-deb.tgz
-	export MLX_UP_URL=https://www.mellanox.com/downloads/firmware/mlxup/4.26.0/SFX/linux_arm64/mlxup
+	export MLX_FT_URL=https://www.mellanox.com/downloads/MFT/mft-4.32.0-120-arm64-deb.tgz
+	export MLX_UP_URL=https://www.mellanox.com/downloads/firmware/mlxup/4.30.0/SFX/linux_arm64/mlxup
 else
 	echo "Unsupported architecture: $(uname -m)"
 	exit 1
