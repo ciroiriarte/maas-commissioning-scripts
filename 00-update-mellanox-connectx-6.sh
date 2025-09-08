@@ -60,7 +60,7 @@ fi
 
 echo "Checking for presence of Mellanox ConnectX-6 card"
 
-lspci -nn | grep -iqE 'mell.*connectx-6' || {
+lspci -nn | grep -iE 'mell.*connectx-6' > /dev/null || {
 	echo "No Mellanox ConnectX-6 cards detected, exiting."
 	exit 0
 }
