@@ -13,7 +13,7 @@
 #  system_product: PowerEdge R740
 # may_reboot: true
 # recommission: true
-# timeout: 00:30:00
+# timeout: 01:00:00
 # --- End MAAS 1.0 script metadata ---
 
 
