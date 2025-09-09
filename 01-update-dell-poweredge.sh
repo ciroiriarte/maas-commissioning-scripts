@@ -31,10 +31,11 @@ dmidecode -t system |grep -E "PowerEdge|R750 vSAN Ready Node" > /dev/null || {
 if ! command -v dsu &> /dev/null; then
     echo "Installing Dell DSU..."
     AGENT="Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36"
-    wget --user-agent="${AGENT}" https://dl.dell.com/FOLDER12418373M/2/Systems-Management_Application_03GC8_LN64_2.1.1.0_A00_01.BIN
+    FILE=Systems-Management_Application_03GC8_LN64_2.1.1.0_A00_01.BIN
+    wget --user-agent="${AGENT}" https://dl.dell.com/FOLDER12418373M/2/${FILE}
 
-    chmod +x Systems-Management_Application_03GC8_LN64_2.1.1.0_A00.BIN
-    ./Systems-Management_Application_03GC8_LN64_2.1.1.0_A00.BIN -q
+    chmod +x ${FILE}
+    ./${FILE} -q
 fi
 
 # Run DSU to update all firmware
