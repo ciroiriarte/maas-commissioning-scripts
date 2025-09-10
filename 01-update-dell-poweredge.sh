@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # --- Start MAAS 1.0 script metadata ---
-# name: 01-dell-firmware-update
+# name: 01-update-dell-poweredge
 # title: Dell Firmware Update for PowerEdge R740/R750
 # description: Updates BIOS, iDRAC, CPLD, NVMe, SAS, and NIC firmware using Dell DSU
 # script_type: commissioning
