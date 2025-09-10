@@ -1,4 +1,4 @@
-#!/bin/bash -ex
+#!/bin/bash
 
 # --- Start MAAS 1.0 script metadata ---
 # name: 01-dell-firmware-update
@@ -16,6 +16,26 @@
 # timeout: 01:00:00
 # --- End MAAS 1.0 script metadata ---
 
+##
+#    MAAS Commissioning Script
+##
+#    Copyright (C) 2025 Millicom CAM SEM
+#
+#    Author(s): Ciro Iriarte <ciro.iriarte@millicom.com>
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU General Public License as published by
+#    the Free Software Foundation, version 3 of the License.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU General Public License for more details.
+#
+#    You should have received a copy of the GNU General Public License
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+#
 
 [ ${UID} -eq 0 ] || {
 	echo "root is required"
