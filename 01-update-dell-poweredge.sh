@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # --- Start MAAS 1.0 script metadata ---
-# name: 01-update-dell-poweredge
+# name: 01-update-dell-poweredge.sh
 # title: Dell Firmware Update for PowerEdge R740/R750
 # description: Updates BIOS, iDRAC, CPLD, NVMe, SAS, and NIC firmware using Dell DSU
 # script_type: commissioning
@@ -9,8 +9,8 @@
 # packages:
 #  apt: libgpgme11
 # for_hardware:
-#  system_product: R750 vSAN Ready Node
-#  system_product: PowerEdge R740
+#   - system_product: R750 vSAN Ready Node
+#   - system_product: PowerEdge R740
 # may_reboot: true
 # recommission: true
 # timeout: 01:00:00

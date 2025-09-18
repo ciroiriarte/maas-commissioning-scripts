@@ -1,6 +1,6 @@
 #!/bin/bash
 # --- Start MAAS 1.0 script metadata ---
-# name: 01-connectx6-01-fwupdate
+# name: 01-update-mellanox-connectx-6.sh
 # title: Configure Mellanox MT28908 NICs
 # description: Update firmware, enable features on Mellanox MT28908 NICs
 # type: commissioning
@@ -108,11 +108,12 @@ for D in $(lspci | awk '/Mellanox.*ConnectX-6/{print $1}'); do
 	echo "Setting IP version for PXE/UEFI boot. 2 = Default to IPv4 then IPv6 (IPv6 only if IPv4 fails)"
 	/usr/bin/mlxconfig -y -d "${D}" set IP_VER=2
 
-	echo "Setting Boot Options.  BOOT_VLAN should be zero for all environments other than Cisco"
-	/usr/bin/mlxconfig -y -d "${D}" set BOOT_VLAN=0 BOOT_LACP_DIS=1 BOOT_VLAN_EN=0 BOOT_UNDI_NETWORK_WAIT=30
+	# For TigoOpenCloud we setup only some ports for PXE
+	#echo "Setting Boot Options.  BOOT_VLAN should be zero for all environments other than Cisco"
+	#/usr/bin/mlxconfig -y -d "${D}" set BOOT_VLAN=0 BOOT_LACP_DIS=1 BOOT_VLAN_EN=0 BOOT_UNDI_NETWORK_WAIT=30
 
-	echo "Enabling Expansion ROM and passing and enabling configuration of PXE and UEFI boot options through host's BIOS"
-	/usr/bin/mlxconfig -y -d "${D}" set EXP_ROM_UEFI_x86_ENABLE=1 EXP_ROM_PXE_ENABLE=1 EXP_ROM_UEFI_ARM_ENABLE=1
+	#echo "Enabling Expansion ROM and passing and enabling configuration of PXE and UEFI boot options through host's BIOS"
+	#/usr/bin/mlxconfig -y -d "${D}" set EXP_ROM_UEFI_x86_ENABLE=1 EXP_ROM_PXE_ENABLE=1 EXP_ROM_UEFI_ARM_ENABLE=1
 done
 
 exit 0
