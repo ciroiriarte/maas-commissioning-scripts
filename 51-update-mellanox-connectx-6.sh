@@ -1,15 +1,15 @@
 #!/bin/bash
 # --- Start MAAS 1.0 script metadata ---
-# name: 01-update-mellanox-connectx-6.sh
+# name: 51-update-mellanox-connectx-6.sh
 # title: Configure Mellanox MT28908 NICs
-# description: Update firmware, enable features on Mellanox MT28908 NICs
+# description: Update firmware, enable features on Mellanox MT28908, MT2894 and MT2892 NICs
 # type: commissioning
 # script_type: commissioning
-# tags: commissioning
+# tags: update_firmware set_config
 # recommission: True
 # destructive: False
 # hardware_type: node
-# for_hardware: pci:15b3:101b
+# for_hardware: pci:15b3:101b,pci:15b3:101f,pci:15b3:101d
 # may_reboot: True
 # --- End MAAS 1.0 script metadata ---
 
